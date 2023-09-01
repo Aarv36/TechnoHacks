@@ -1,0 +1,23 @@
+import random
+
+def generate_password(length):
+    # Define the characters that will be used for the generated password
+    character_set = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+    
+    # Generate a random list of characters of the specified length
+    password_characters = random.sample(character_set, length)
+    
+    # Convert the list into a string
+    password = "".join(password_characters)
+    
+    return password
+
+if __name__ == "__main__":
+    # Take input from the user for the password length
+    password_length = int(input("Enter the length of the password: "))
+    
+    # Generate the password
+    generated_password = generate_password(password_length)
+    
+    # Print the generated password
+    print("Generated password is:", generated_password)
